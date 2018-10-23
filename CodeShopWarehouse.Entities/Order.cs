@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace CodeShopWarehouse.Entities
 {
-    public class Order 
+    public class Order: IOrder
     {
         public int Id { get; set; }
         public bool Processed { get; set; }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace CodeShopWarehouse.Web
+namespace CodeShopWarehouse.Web1
 {
     public class Program
     {

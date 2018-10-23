@@ -14,7 +14,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\CodeShopWarehouse.Business\CodeShopWarehouse.Business.csproj" />
-      <ProjectReference Include="..\CodeShopWarehouse.Data\CodeShopWarehouse.Data.csproj" />
     </ItemGroup>
 
 </Project>

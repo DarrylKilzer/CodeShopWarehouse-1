@@ -6,28 +6,33 @@ using CodeShopWarehouse.Entities;
 namespace CodeShopWarehouse.Business
 {
     // Business Logic
-    public class OrdersService
+    public class OrdersService : IOrdersService
     {
-        private readonly OrdersRepo _ordersRepo;
+        private readonly IOrdersRepo _ordersRepo;
 
-        public OrdersService(OrdersRepo ordersRepo)
+        public OrdersService(IOrdersRepo ordersRepo)
         {
             _ordersRepo = ordersRepo;
         }
 
-        public List<Order> GetUnprocessedOrders()
+        public List<IOrder> GetUnprocessedOrders()
         {
             return _ordersRepo.GetUnProcessedOrders();
         }
 
-        public Order GetById(int id)
+        public IOrder GetById(int id)
         {
             return _ordersRepo.GetOrderById(id);
         }
         
-        public Order ProcessOrder(Order order)
+        public IOrder ProcessOrder(Order order)
         {
             return _ordersRepo.UpdateOrder(order);
+        }
+
+        public IOrder CreateOrder(Order order)
+        {
+            return _ordersRepo.CreateOrder(order);
         }
     }
 }

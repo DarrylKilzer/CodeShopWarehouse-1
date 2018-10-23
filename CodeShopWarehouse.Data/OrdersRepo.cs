@@ -8,13 +8,7 @@ namespace CodeShopWarehouse.Data
     public class OrdersRepo : IOrdersRepo
     {
         // This is where I'd put my database... IF I HAD ONE!!!
-        private readonly IDbConnection _db;
-        
-        public OrdersRepo(IDbConnection db)
-        {
-            _db = db;
-        }
-        public Order GetOrderById(int id)
+        public IOrder GetOrderById(int id)
         {
             return new Order()
             {
@@ -26,7 +20,7 @@ namespace CodeShopWarehouse.Data
             };
         }
 
-        public Order UpdateOrder(Order o)
+        public IOrder UpdateOrder(IOrder o)
         {
             return new Order()
             {
@@ -34,11 +28,12 @@ namespace CodeShopWarehouse.Data
                 OrderType = o.OrderType,
                 Processed = o.Processed,
                 ProductId = Guid.NewGuid().ToString(),
+                ProcessedDate = DateTimeOffset.Now,
                 ProductStock = o.ProductStock 
             }; 
         }
 
-        public Order CreateOrder(Order data)
+        public IOrder CreateOrder(IOrder data)
         {
             return new Order()
             {
@@ -50,9 +45,9 @@ namespace CodeShopWarehouse.Data
             }; 
         }
 
-        public List<Order> GetUnProcessedOrders()
+        public List<IOrder> GetUnProcessedOrders()
         {
-            var orderList = new List<Order>();
+            var orderList = new List<IOrder>();
             for (int i = 0; i < 20; i++)
             {
                 orderList.Add(GetOrderById(i));
@@ -61,7 +56,7 @@ namespace CodeShopWarehouse.Data
             return orderList;
         }
 
-        public List<Order> GetOrdersByProductId(int productId)
+        public List<IOrder> GetOrdersByProductId(int productId)
         {
             throw new NotImplementedException();
         }

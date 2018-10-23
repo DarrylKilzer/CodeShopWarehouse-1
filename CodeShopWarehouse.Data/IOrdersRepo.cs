@@ -5,10 +5,9 @@ namespace CodeShopWarehouse.Data
  {
      public interface IOrdersRepo 
      {
-         Order GetOrderById(int id);
-         Order UpdateOrder(Order o);
-         Order CreateOrder(Order data);
-         List<Order> GetUnProcessedOrders();
-         List<Order> GetOrdersByProductId(int productId);
+         IOrder GetOrderById(int id);
+         IOrder UpdateOrder(IOrder o);
+         IOrder CreateOrder(IOrder data);
+         List<IOrder> GetUnProcessedOrders();
      }
  }
