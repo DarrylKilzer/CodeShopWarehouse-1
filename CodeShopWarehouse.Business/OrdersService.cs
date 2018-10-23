@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CodeShopWarehouse.Data;
 using CodeShopWarehouse.Entities;
 
@@ -27,7 +26,12 @@ namespace CodeShopWarehouse.Business
         
         public IOrder ProcessOrder(Order order)
         {
-            return _ordersRepo.UpdateOrder(order);
+            if (order.Processed != true)
+            {
+                return _ordersRepo.UpdateOrder(order);
+            }
+
+            return order;
         }
 
         public IOrder CreateOrder(Order order)

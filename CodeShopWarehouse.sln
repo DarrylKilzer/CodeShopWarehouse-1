@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeShopWarehouse.Business"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeShopWarehouse.Web1", "CodeShopWarehouse.Web1\CodeShopWarehouse.Web1.csproj", "{865FCB56-27F0-47CF-BA65-83D12051DFDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeShopWarehouse.Tests", "CodeShopWarehouse.Tests\CodeShopWarehouse.Tests.csproj", "{2981295B-7766-4826-9F07-62E2FD9192FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{865FCB56-27F0-47CF-BA65-83D12051DFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865FCB56-27F0-47CF-BA65-83D12051DFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865FCB56-27F0-47CF-BA65-83D12051DFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2981295B-7766-4826-9F07-62E2FD9192FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2981295B-7766-4826-9F07-62E2FD9192FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2981295B-7766-4826-9F07-62E2FD9192FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2981295B-7766-4826-9F07-62E2FD9192FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
