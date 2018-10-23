@@ -24,7 +24,7 @@ namespace CodeShopWarehouse.Business
             return _ordersRepo.GetOrderById(id);
         }
         
-        public IOrder ProcessOrder(Order order)
+        public IOrder ProcessOrder(IOrder order)
         {
             if (order.Processed != true)
             {
@@ -34,7 +34,7 @@ namespace CodeShopWarehouse.Business
             return order;
         }
 
-        public IOrder CreateOrder(Order order)
+        public IOrder CreateOrder(IOrder order)
         {
             return _ordersRepo.CreateOrder(order);
         }

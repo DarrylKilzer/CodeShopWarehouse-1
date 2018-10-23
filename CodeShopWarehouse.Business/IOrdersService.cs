@@ -7,7 +7,7 @@ namespace CodeShopWarehouse.Business
     {
         List<IOrder> GetUnprocessedOrders();
         IOrder GetById(int id);
-        IOrder ProcessOrder(Order order);
-        IOrder CreateOrder(Order order);
+        IOrder ProcessOrder(IOrder order);
+        IOrder CreateOrder(IOrder order);
     }
 }
